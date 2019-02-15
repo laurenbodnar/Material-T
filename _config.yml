@@ -8,8 +8,8 @@
 # 全局
 # Site
 #---------------------------
-favicon: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/favicon.png
-apple_touch_icon: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/apple-touch-icon.png
+favicon: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/favicon.ico
+apple_touch_icon: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/favicon.png
 
 
 #---------------------------
