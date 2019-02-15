@@ -61,6 +61,33 @@
 }
 
 /* 图片 */
+.post_content img:hover {
+	filter: drop-shadow(0px 0px 10px);
+}
 .post_content img {
-	box-shadow: 2px 0px 10px 0px rgba(0,0,0,0.12), 0 5px 10px -5px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: .3s
+}
+
+/* 链接 */
+a {
+  color: #56c2a4;
+}
+a:hover:not(.navbar-brand),
+a:focus:not(.navbar-brand){
+  color: white;
+  text-decoration: none;
+  background-color: #56c2a4;
+}
+
+/* archive categories */
+.nav-pills.nav-pills-rose .nav-item .nav-link.active {
+    background-color: #56c2a4;
+}
+
+h6,
+.h6 {
+  font-size: 0.75rem;
+  text-transform: capitalize;
+  font-weight: 500;
 }
