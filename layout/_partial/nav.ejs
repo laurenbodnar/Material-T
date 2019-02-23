@@ -24,8 +24,8 @@
                     <% if(theme.navbar.icons.enable) { %>
                         <% for(var j in theme.navbar.icons.list) { %>
                             <li class="nav-item">
-                                <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="<%- theme.navbar.icons.list[j] %>" target="_blank" data-original-title="<%= theme.navbar.icons.tips %>">
-                                    <i class="fa fa-<%= j %>"></i>
+                                <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="<%- theme.navbar.icons.list[j].url %>" target="_blank" data-original-title="<%= theme.navbar.icons.list[j].tips %>">
+                                    <i class="fab fa-<%= j %> fa-lg"></i>
                                 </a>
                             </li>
                         <% } %>

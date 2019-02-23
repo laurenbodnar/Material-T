@@ -1,11 +1,11 @@
 <% if(theme.post.toc.enable){ %>
-<%     var col_num = 7 %>
-<% }else { var col_num = 8 } %>
+<%     var offset_col_num = 1 %>
+<% }else { var offset_col_num = 2 } %>
 <div class="main main-raised">
   <div class="container">
     <div class="section">
         <div class="row">
-            <div class="col-md-<%- col_num %> offset-md-2">
+            <div class="col-md-8 offset-md-<%- offset_col_num %>">
                 <div class="post_content">
                     <%- page.content %>
                 </div>
@@ -13,11 +13,12 @@
                 <div>
                     <p>
                         <% page.tags.each(function(tag) { %>     
-                            <span class="badge badge-default">#&nbsp;<%- tag.name %></span>
+                            <a class="badge badge-default" href="/archives/#<%- tag.name %>">#&nbsp;<%- tag.name %></a>
                             &nbsp;
                         <% }) %>    
                     </p>
                 </div>
+                <%- theme.issue %>
             </div>
             <!-- TOC -->
             <%- partial('../toc') %>

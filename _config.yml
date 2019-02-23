@@ -43,11 +43,19 @@ navbar:
       about: /about/
   icons:
     enable: true
-    tips: 'See me here'
     list: 
-      github: https://github.com/NieLamu
-      
-  
+      github: 
+        url: https://github.com/NieLamu
+        tips: 'Codes Page'
+      instagram: 
+        url: https://www.instagram.com/simadao/
+        tips: 'instagram'
+      twitter: 
+        url: https://twitter.com/mxmxlty2010
+        tips: 'twitter'
+      facebook: 
+        url: https://www.facebook.com/nielamu
+        tips: 'facebook'
 
 #---------------------------
 # 文章页
@@ -60,7 +68,7 @@ post:
   # available: 1 | 2
   layout: 1
   toc: 
-    enable: false
+    enable: true
   # Code Highlight Theme available: github | tomorrow | tomorrow-night | tomorrow-night-eighties
   highlight:
     enable: true
@@ -70,7 +78,7 @@ post:
     type: disqus
 
 disqus:
-  shortname:
+  shortname: nielamu
 
 # Valine
 # You can get your appid and appkey from https://leancloud.cn
@@ -103,18 +111,19 @@ archive:
 about:
   banner_img: https://images.unsplash.com/photo-1549937263-318fad9e0f59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
   # available: 0 - 100
-  banner_img_height: 70
+  banner_img_height: 100
   avatar: https://github.com/NieLamu/NieLamu.github.io/raw/develop/statics/img/avatar.jpg
-  name: myname
-  job: myjob
-  introduce: my introduce
-  extension: <b>my extension</b>
-  icons: 
-    github: https://github.com/NieLamu
+  name: NieLamu
+  job: A coder
+  introduce: 
+  extension: <b>はじめまして ^_^</b>
+  icons:
+    
 
 
 #---------------------------
 # 底部信息
 # Footer
 #---------------------------
+issue: <a href="https://github.com/NieLamu/NieLamu.github.io/issues" class="btn">Report an issue</a>
 footer: <b>Drink plenty of hot water and try to restart.</b>

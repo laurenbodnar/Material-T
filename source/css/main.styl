@@ -42,6 +42,15 @@
 .post-index-img {
 	box-shadow: 0 0 0 0 !important;
 }
+.post-card {
+    margin-top: 0;
+    padding: 20px 0;
+    border-radius: 6px;
+}
+.post-card:hover {
+	box-shadow: 0px 0px 50px #000;
+	transition: 0.3s;
+}
 .nav-link {
 	box-shadow: 0 0 0 0 !important;
 }
@@ -67,11 +76,17 @@
 .post_content img {
     cursor: pointer;
     transition: .3s
+    border-radius: 6px;
+}
+
+.tocbot-active-link {
+  color: #56c2a4 !important;
 }
 
 /* 链接 */
 a {
   color: #56c2a4;
+  border-radius: 3px;
 }
 a:hover:not(.navbar-brand),
 a:focus:not(.navbar-brand){
@@ -81,8 +96,11 @@ a:focus:not(.navbar-brand){
 }
 
 /* archive categories */
-.nav-pills.nav-pills-rose .nav-item .nav-link.active {
+.nav-pills.nav-pills-rose .nav-item .nav-link.active, .nav-pills.nav-pills-rose .nav-item .nav-link.active:focus, .nav-pills.nav-pills-rose .nav-item .nav-link.active:hover {
     background-color: #56c2a4;
+}
+.nav-pills .nav-item .nav-link {
+  font-size: 16px;
 }
 
 h6,
@@ -90,4 +108,11 @@ h6,
   font-size: 0.75rem;
   text-transform: capitalize;
   font-weight: 500;
+}
+.nav-pills .nav-item .nav-link, .nav-link, .badge, .btn {
+  text-transform: capitalize;
+}
+
+#tocbot>ol {
+  padding-left: 0;
 }

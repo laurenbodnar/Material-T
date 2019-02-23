@@ -32,10 +32,12 @@
       <div class="container">
         <h1 class="title text-center post_title"><%- page.title %></h1>
         <p class="text-center"><b><%- full_date(page.date, 'dddd, MMMM Do YYYY, h:mm a') %></b></p>
+        <p class="text-center"><%- page.author || config.author %></p>
       </div>
     <% } else { %>
       <div class="container">
         <h1 class="title text-center"><%- subtitle %></h1>
+        <h2 class="title text-center"><%- config.description %></h2>
       </div>
     <% } %>
   </div>

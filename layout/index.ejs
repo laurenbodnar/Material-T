@@ -17,14 +17,15 @@
                     <p><%- strip_html(post.content).substring(0,theme.index.auto_excerpt.length) %>...</p>
                     <% } %>
                     <% if(theme.index.post_info.enable){ %>
-                    <p class="h6">
-                        <i class="material-icons">date_range</i><%- date(post.date,"YYYY-MM-DD") %>
+                    <p class="h5">
+                        <i class="far fa-calendar"></i>&nbsp;<a href="/archives"><%- date(post.date,"YYYY-MM-DD") %></a>&nbsp;
                         <% if(post.tags.length) { %>
-                            <i class="material-icons">bookmark_border</i>
+                            <i class="far fa-bookmark"></i>&nbsp;
                                 <% post.tags.each(function(tag){ %>
-                                    <%= tag.name %> &nbsp;
+                                    <a href="/archives/#<%- tag.name %>"><%= tag.name %></a>&nbsp;
                                 <% }) %>
                         <% } %>
+                        <i class="fas fa-pen-fancy"></i></i>&nbsp;<%- page.author %>
                     </p>
                     <% } %>
                 </div>

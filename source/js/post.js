@@ -1,13 +1,14 @@
 $(document).ready(function(){
     var navHeight = $(".navbar").height();
+    var minWidth = 768;
     var toc = $("#toc");
     var tocL = toc.offset().left;
-    var tocT = navHeight + $(".material-icons").height();
+    var tocT = navHeight + $(".far").height();
     var tocLimMin = $(".main").offset().top;
     var tocLimMax = $("#comments").offset().top - navHeight;
     $(window).scroll(function(){
         var scroH = document.body.scrollTop + document.documentElement.scrollTop;
-        if(tocLimMin <= scroH && scroH <= tocLimMax){  
+        if(window.innerWidth > minWidth && tocLimMin <= scroH && scroH <= tocLimMax){  
             toc.css({
                 "display": "block",
                 "position": "fixed",
@@ -24,6 +25,12 @@ $(document).ready(function(){
             toc.css("display","none")
         }
     }) 
+    $(window).resize(function(){
+        if(window.innerWidth <= minWidth){
+            console.log(window.innerWidth)
+            toc.css("display","none")
+        }
+    })
     tocbot.init({
         tocSelector: '#tocbot',
         contentSelector: '.post_content',

@@ -6,10 +6,18 @@
             <img src="<%- url_for(theme.about.avatar) %>" alt="Circle Image" class="img-raised rounded-circle img-fluid">
           </div>
           <div class="name">
-            <h3 class="title"><%= theme.about.name %></h3>
-            <h6><%= theme.about.job %></h6>
-            <% for(var i in theme.about.icons) { %>
-              <a href="<%- theme.about.icons[i] %>" class="btn btn-just-icon btn-link btn-<%- i %>"><i class="fa fa-<%- i %>"></i></a>
+            <h2 class="title"><%= theme.about.name %></h2>
+            <h5><%= theme.about.job %></h5>
+            <% if(theme.about.icons) { %>
+              <% for(var i in theme.about.icons) { %>
+                <a href="<%- theme.about.icons[i] %>" class="btn btn-just-icon btn-link"><i class="fab fa-lg fa-<%- i %>"></i></a>
+              <% } %>
+            <% } else { %>
+              <% for(var j in theme.navbar.icons.list) { %>
+                <a class="btn btn-just-icon btn-link" rel="tooltip" title="" data-placement="bottom" href="<%- theme.navbar.icons.list[j].url %>" target="_blank" data-original-title="<%= theme.navbar.icons.list[j].tips %>">
+                  <i class="fab fa-lg fa-<%- j %>"></i>
+                </a>
+              <% } %>
             <% } %>
           </div>
         </div>
