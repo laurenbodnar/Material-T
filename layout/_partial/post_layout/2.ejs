@@ -10,8 +10,8 @@
           <div>
               <p>
                   <% page.tags.each(function(tag) { %>     
-                      <span class="badge badge-default">#&nbsp;<%- tag.name %></span>
-                      &nbsp;
+                    <a class="badge badge-default" href="/archives/#<%- tag.name %>">#&nbsp;<%- tag.name %></a>
+                    &nbsp;
                   <% }) %>    
               </p>
           </div>
