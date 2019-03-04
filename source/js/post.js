@@ -31,6 +31,21 @@ $(document).ready(function(){
             toc.css("display","none")
         }
     })
+
+    $(".post_content img").on("click", function(e){
+        $("body").append(
+            "<div id='imgBackground'>"
+                +`<img src='${e.target.src}'>`
+            +"</div>"
+        );
+        $("#imgBackground").one("click", function(e){
+            $("#imgBackground").remove();
+        });
+        $("#imgBackground img").one("click", function(e){
+            e.stopPropagation();
+        });
+    });
+
     tocbot.init({
         tocSelector: '#tocbot',
         contentSelector: '.post_content',
