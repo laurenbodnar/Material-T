@@ -125,5 +125,5 @@ about:
 # 底部信息
 # Footer
 #---------------------------
-issue: <a href="https://github.com/NieLamu/NieLamu.github.io/issues" class="btn" target="_blank">Report an issue</a>
+issue: <a href="https://github.com/NieLamu/NieLamu.github.io/" class="btn" target="_blank">Fork Me</a><a href="https://github.com/NieLamu/NieLamu.github.io/issues" class="btn" target="_blank">Report an issue</a>
 footer: <b>Drink plenty of hot water and try to restart.</b>
