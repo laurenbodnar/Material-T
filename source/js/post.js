@@ -1,13 +1,13 @@
 $(document).ready(function(){
-    var navHeight = $(".navbar").height();
     var minWidth = 768;
     var toc = $("#toc");
     var tocL = toc.offset().left;
-    var tocT = navHeight + $(".far").height();
+    var tocT = $(".navbar").height() + $(".far").height();
     var tocLimMin = $(".main").offset().top;
-    var tocLimMax = $("#comments").offset().top - navHeight;
     $(window).scroll(function(){
         var scroH = document.body.scrollTop + document.documentElement.scrollTop;
+        var tocLimMax = $("#comments").offset().top - toc.height() - 100;
+        console.log('xxxx', tocLimMin, scroH, tocLimMax);
         if(window.innerWidth > minWidth && tocLimMin <= scroH && scroH <= tocLimMax){  
             toc.css({
                 "display": "block",
@@ -15,19 +15,15 @@ $(document).ready(function(){
                 "left": tocL,
                 "top": tocT
             })
-        }else if(scroH <= tocLimMin){  
-            toc.css({
-                "position": "",
-                "left": '',
-                "top": ''
-            })
-        } else if(scroH > tocLimMax){
+        }else if (window.innerWidth <= minWidth){
+            $(".section").append($(".privateBadge"))
+            $(".privateBadge a").css("display","list-item")
+        }else {  
             toc.css("display","none")
         }
     }) 
     $(window).resize(function(){
         if(window.innerWidth <= minWidth){
-            console.log(window.innerWidth)
             toc.css("display","none")
         }
     })
