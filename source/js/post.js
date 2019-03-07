@@ -7,7 +7,6 @@ $(document).ready(function(){
     $(window).scroll(function(){
         var scroH = document.body.scrollTop + document.documentElement.scrollTop;
         var tocLimMax = $("#comments").offset().top - toc.height() - 100;
-        console.log('xxxx', tocLimMin, scroH, tocLimMax);
         if(window.innerWidth > minWidth && tocLimMin <= scroH && scroH <= tocLimMax){  
             toc.css({
                 "display": "block",
